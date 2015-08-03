@@ -1,0 +1,72 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "TrebuchetMS";
+    src: url("../fontes/trebuc.ttf");
+}
+@font-face {
+    font-family: "TrebuchetMSBold";
+    src: url("../fontes/trebucbd.ttf");
+}
+*{
+    margin: 0;
+    font-family: TrebuchetMS, sans-serif;
+    padding: 0;
+}
+.quadrosJS{
+    background-color: white;
+    margin: 10px 0 0 10px;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+#quadro{
+    width: 100%;
+    font-size: 12pt;
+    height: 350px;
+}
+.tituloAvaliacao{
+    padding: 6px 0 6px 12px;
+    background-color: #ba653c;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 7px;
+}
+#textoQuadro{
+    background-color: white;
+    line-height: 32px;
+    margin-left: 10px;
+    padding: 10px 0 10px 15px;
+    color: #5c5c5c;
+}
+#textoQuadro p a{
+    color: #2c2c2d;
+    font-family: TrebuchetMSBold, sans-serif;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+#comomeaval{
+    margin-left: 8px;
+    font-size: 12pt;
+}
+#comomeaval tr td,th{
+    padding: 3pt;
+}
+#tbTitulo, #tbTituloLB{
+    background-color: #3b3b3b;
+    color: white;
+}
+.tbCorpo{
+    background-color: #ebeeea;
+}
+.quesito{
+    width: 307px;
+}
+.nt,.pa,.pb{
+    width: 35px;
+}
+.pq, .obspas{
+    width: 70px;
+}
+.obs{
+    width: 300px;
+}

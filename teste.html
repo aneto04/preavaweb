@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document.getElementById().style.color='black';</title>
+    <style>
+        body {
+        padding:0;
+        margin:0 20px;
+        }
+
+        #tabela {
+        height:400px;
+        margin:30px 0px 0px 0px;
+        overflow:hidden;
+        position:relative;
+        background-color:#eee;
+        }    
+
+        #menu {
+        width:100%;
+        list-style:none;
+        padding:0;
+        margin:0;
+        top:0px;
+        bottom:0px;
+        position:absolute;
+        height:100%;
+        width:300px;
+        }
+
+        #menu li {
+        padding:10px 0;
+        text-align:right;
+        display:block;
+        cursor:hand;
+        cursor:pointer;
+        }
+
+        #menu li a {
+        background:url() repeat #1f1f1f;
+
+        color:#ddd;
+        font-family:helvetica, arial, verdana;
+        font-size:9px;
+        font-weight:900;
+        display:inline;
+        padding:20px 8px 5px 20px;
+        text-decoration:none;
+        }
+
+        #menu li span {
+        font-family:georgia, arial;
+        font-size:9px;
+        color:#464646;
+        }
+    </style>
+    <script src="jquery-1.4.js"></script>
+    <script>
+        $('#cima').bind('mousedown mouseup', function(event){
+            if(event.type == 'mousedown'){
+                $('#tabela').animate({"scrollTop": "+=2000px"}, 3000, 'linear');
+            }else{
+                $('#tabela').stop();
+            }
+        });
+
+        $('#baixo').bind('mousedown mouseup', function(event){
+            if(event.type == 'mousedown'){
+                $('#tabela').animate({"scrollTop": "-=2000px"}, 3000, 'linear');
+            }else{
+                $('#tabela').stop();
+            }
+        });
+    </script>
+</head>
+<body>
+    <a id="cima" href="#">cima</a>
+    <a id="baixo" href="#">baixo</a>    
+    <div id="tabela">
+        <ul id="menu">
+            <li><a href="#">MENU 1 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE 2 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE LONG 3 <span> / 2007</span></a></li>
+            <li><a href="#">MENU 4 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE 5 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE LONG 6 <span> / 2007</span></a></li>
+            <li><a href="#">MENU 7 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE 8 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE LONG 9 <span> / 2007</span></a></li>
+            <li><a href="#">MENU 10 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE 11 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE LONG 12 <span> / 2007</span></a></li>
+            <li><a href="#">MENU 13 <span> / 2007</span></a></li>
+            <li><a href="#">SUPER LONG MENU MENU MENU MENU SIZE 14 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE LONG 15 <span> / 2007</span></a></li>
+            <li><a href="#">MENU 16 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE 17 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE LONG 18 <span> / 2007</span></a></li>
+            <li><a href="#">MENU 19 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE 20 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE LONG 21 <span> / 2007</span></a></li>
+            <li><a href="#">MENU 22 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE 5 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE LONG 23 <span> / 2007</span></a></li>
+            <li><a href="#">MENU 24 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE 25 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE LONG 26 <span> / 2007</span></a></li>
+            <li><a href="#">MENU 27 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE 28 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE LONG 29 <span> / 2007</span></a></li>
+            <li><a href="#">MENU 30 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE 31 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE LONG 32 <span> / 2007</span></a></li>
+            <li><a href="#">MENU 33 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE 34 <span> / 2007</span></a></li>
+            <li><a href="#">MENU SIZE LONG 35 <span> / 2007</span></a></li>
+        </ul>
+    </div>
+</body>
+</html>

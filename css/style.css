@@ -1,0 +1,458 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "fonteNormal";
+    src: url("../fontes/trebuc.ttf");
+}
+@font-face {
+    font-family: "fonteBold";
+    src: url("../fontes/trebucbd.ttf");
+}
+*{
+    margin: 0;
+    font-family: fonteNormal, sans-serif;
+    padding: 0;
+}
+*:link{
+    text-decoration: none;
+    border: none;
+}
+
+/*----------------------------------------------- Barra do Usuário ---------------------------------------------------*/
+
+.barraMenu{
+    position: fixed;
+    background-color: #ba653c;
+    height: 50px;
+    width: 100%;
+    z-index: 105;
+}
+#barraInfos{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.background{
+    position: relative;
+    top: 50px;
+    width: 1000px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../imagens/background.png");
+    background-repeat: repeat;
+    padding-bottom: 10px;
+}
+.logoItevaBranco{
+    display: block;
+    position: relative;
+    float: left;
+    margin-left: 30px;
+    top: 3px;
+    z-index: 101;
+}
+.user{
+    display: block;
+    position: relative;
+    float: right;
+}
+
+/*-------------------------------------------------------*/
+
+.identificaUsuario{
+    display: inline-block;
+    position: relative;
+}
+#imgUser{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    float: left;
+    margin: 5px 7px 0 0;
+}
+#nameUser{
+    font-family: fonteBold,sans-serif;
+    color: white;
+    margin-top: 6px;
+    float: right;
+    font-size: 12pt;
+    padding: 10px 5px 10px 0;
+    border-right: 1px solid #fe8646;
+}
+
+/*-------------------------------------------------------*/
+
+.opcoesMenu{
+    display: inline-block;
+    position: relative;
+    bottom: 5px;
+}
+#configUser{
+    padding: 0 10px 0 10px;
+    float: left;
+}
+#sair{
+    padding: 0 10px 0 0;
+    float: right;
+}
+
+/*-------------------------------------------- Informações do Usuário ------------------------------------------------*/
+
+.info{
+    position: relative;
+    left: 15px;
+    padding-top: 35px;
+    padding-right: 13px;
+}
+label #tperiodo{
+    float: right;
+    top: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+#imgUserInfo{
+    position: relative;
+    width: 136px;
+    height: 136px;
+    border-radius: 100%;
+    float: left;
+    margin-top: 0;
+    box-shadow: 1px 3px 5px rgba(0,0,0,.4);
+    z-index: 50;
+}
+#comments{
+    background-image: url("../imagens/comentario.png");
+    background-repeat: no-repeat;
+    font-size: 11pt;
+    padding: 3px 10px 5px 15px;
+}
+
+                                    /* Configurações de texto do '.info' */
+
+.infoTexto{
+    background-image: url("../imagens/informacoes.png"); 
+    background-size: 100% 100%;
+    height: 113px;
+    background-repeat: no-repeat;
+    margin-left: 65px;
+    position: relative;
+    line-height: 37px;
+    display: block;
+    text-align: left;
+    color: white;
+    font-family: fonteBold, sans-serif;
+    font-size: 14pt;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 80px;
+}
+
+#textoDaInfo{
+    width: 98.5%;
+    float: left;
+}
+
+#nomeUser{
+    font-size: 18pt;
+    font-family: fontNormal,sans-serif;
+    font-weight: normal;
+}
+.textoInfo p a{
+    font-size: 14pt;
+    font-family: fontNormal,sans-serif;
+    font-weight: normal;
+}
+#hr{
+    background-color: #fe8646;
+    color: #fe8646;
+    display: block;
+    height: 1px;
+    border: transparent;
+    width: 310px;
+}
+/*----------------------------------------------- Bloco de Pessoas ---------------------------------------------------*/
+
+#pessoasTexto{
+    float: right;
+    font-size: 15pt;
+    color: #ba653c;
+}
+#iframePessoas{
+    position: absolute;
+    width: 170px;
+    height: 460px;
+    background-image: url("../imagens/background-pessoas.png");
+    box-shadow: 1px 1px 1px rgba(0,0,0,1);
+    font-size: 12pt;
+    text-align: center;
+    color: white;
+    padding: 0 20px 20px 20px;
+    border-radius: 5px;
+    float: right;
+    right: 12px;
+}
+/*------------------------------------------------- Botões JS --------------------------------------------------------*/
+
+.avaliacao{
+    width: 600px;
+    position: relative;
+    width: 100%;
+    float: left;
+}
+.avaliacao input{
+    background-color: white;
+    margin-left: 10px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,.3);
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 12pt;
+    color: #5c5c5c;
+    border: transparent;
+    border-radius: 3px;
+    height: auto;
+    transition: .7s;
+}
+
+#imgLBFrame{
+    position: relative;
+    float: right;
+    right: 20px;
+    top: 46px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+
+#botao1{
+    padding: 7px 20px 7px 20px;
+    background-color: #2c2c2d;
+    color: white;
+    cursor: pointer;
+}
+#botao2{
+    padding: 7px 25px 7px 25px;
+    cursor: pointer;
+}
+#botao3{
+    padding: 7px 25px 7px 25px;
+    cursor: pointer;
+}
+
+/*----------------------------------------------------- Quadros JS ---------------------------------------------------*/
+
+#iframe{
+    outline: none;
+    overflow: hidden;
+}
+
+/*-------------------------------------------- Bloco de Qualidades ---------------------------------------------------*/
+
+/*                  Bloco Esquerda                  */
+#sessaoComentario{
+    width: 1000px;
+}
+.pontosPositNegat1{
+    height: 30px;
+    width: 100%;
+    position: relative;
+    background-color: #2c2c2d;
+    border-radius: 5px;
+    color: white;
+    font-size: 14pt;
+    z-index: 2;
+    padding: 8px 8px 0 8px;
+    float: left;
+}
+#imgNegPos1{
+    float: right;
+}
+#imgNegPos1 img{
+    width: 25px;
+    height: 25px;
+}
+/*                  Bloco Direita                  */
+.pontosPositNegat2{
+    height: 30px;
+    width: 470px;
+    position: relative;
+    background-color: #2c2c2d;
+    border-radius: 5px;
+    color: white;
+    font-size: 14pt;
+    z-index: 2;
+    padding: 8px 8px 0 8px;
+    float: right;
+}
+.pontosPositNegat2 a{
+}
+#imgNegPos2{
+    float: right;
+}
+#imgNegPos2 img{
+    width: 25px;
+    height: 25px;
+}
+
+/*---------------------------- Bloco com os comentários ----------------------------*/
+
+table#sessaoComentario{
+    top: 0;
+}
+table#sessaoComentario tr td{
+    top: 0;
+    background-size: 100%;
+    bottom: 80px;
+}
+table#sessaoComentario tr td p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px black solid;
+}
+
+/*                  Bloco Esquerda                  */
+
+.blocoPontos1{
+    width: 100%;
+    position: relative;
+    background-color: white;
+    z-index: 1;
+}
+
+/*                  Bloco Direita                  */
+
+.blocoPontos2{
+    width: 100%;
+    position: relative;
+    background-color: white;
+    z-index: 1;
+}
+
+/*------------------------------------------------------- LightBox ---------------------------------------------------*/
+
+#lightBoxBG{
+    background-color: #848484;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: 0.5;
+    display: none;
+}
+#box{
+    padding: 20px;
+    background-color: white;
+    position: fixed;
+    width: 500px;
+    height: 400px;
+    z-index: 101;
+    top: 30%;
+    left: 35%;
+    font-size: 19pt;
+    font-family: fonteBold, sans-serif;
+    color: #3b3b3b;
+    line-height: 75px;
+    border: 1px solid #898c88;
+    border-radius: 5px;
+    display: none;
+}
+#box a{
+    font-size: 17pt;
+    color: #5c5c5c;
+}
+#fechar, #fecharIframe{
+    float: right;
+    bottom: 50px;
+    cursor: pointer;
+}
+#textA{
+    width: 96%;
+    height: 170px;
+    border-radius: 3px;
+    border-color: #dddddd;
+    background-color: #f7f7f7;
+    padding: 10px;
+    resize: none;
+}
+#salvarLB, #salvarLBFrame{
+    float: right;
+    font-size: 13pt;
+    background-color: #ba653c;
+    padding: 5px 10px 5px 10px;
+    color: white;
+    border: 1px #b44c00 solid;
+    border-radius: 3px;
+    font-family: Trebuchet MS, sans-serif;
+}
+
+/*-------------------------------------------- LightBox iFrame ----------------------------------------------*/
+
+#bgLBFrame{
+    background-color: #848484;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: 0.5;
+    display: none;
+}
+#boxLBFrame{
+    padding: 20px;
+    background-color: white;
+    position: fixed;
+    width: 750px;
+    height: 450px;
+    z-index: 101;
+    top: 30%;
+    left: 35%;
+    font-size: 12pt;
+    font-family: fonteBold, sans-serif;
+    color: #3b3b3b;
+    line-height: 75px;
+    border: 1px solid #898c88;
+    border-radius: 5px;
+    display: none;
+}
+#fecharLBFrame{
+    float: right;
+    bottom: 50px;
+    cursor: pointer;
+}
+.quesitoLBFrame{
+    height: 10px;
+}
+
+#boxLBFrame input{
+    border: none;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    width: 100px;
+    height: 25px;
+}
+
+
+
+#quadroLB{
+    line-height: 0;
+}
+#comomeavalLB{
+    margin-left: 8px;
+    font-size: 12pt;
+}
+#tbTituloLBFrame{
+    background-color: #3b3b3b;
+    color: white;
+    height: 25px;
+}
+.tbCorpoLBFrame{
+    background-color: #ebeeea;
+}
+.quesitoLBFrame{
+    width: 307px;
+}
+.ntLBFrame,.paLBFrame,.pbLBFrame{
+    width: 35px;
+}
+.pqLBFrame, .obspasLBFrame{
+    width: 70px;
+}
