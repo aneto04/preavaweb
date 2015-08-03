@@ -248,12 +248,9 @@ label #tperiodo{
 /*-------------------------------------------- Bloco de Qualidades ---------------------------------------------------*/
 
 /*                  Bloco Esquerda                  */
-#sessaoComentario{
-    width: 1000px;
-}
 .pontosPositNegat1{
     height: 30px;
-    width: 100%;
+    width: 470px;
     position: relative;
     background-color: #2c2c2d;
     border-radius: 5px;
@@ -262,6 +259,7 @@ label #tperiodo{
     z-index: 2;
     padding: 8px 8px 0 8px;
     float: left;
+    left: 10px;
 }
 #imgNegPos1{
     float: right;
@@ -282,6 +280,7 @@ label #tperiodo{
     z-index: 2;
     padding: 8px 8px 0 8px;
     float: right;
+    left: 20px;
 }
 .pontosPositNegat2 a{
 }
@@ -312,10 +311,11 @@ table#sessaoComentario tr td p{
 /*                  Bloco Esquerda                  */
 
 .blocoPontos1{
-    width: 100%;
     position: relative;
     background-color: white;
     z-index: 1;
+    left: 10px;
+    padding: 15px;
 }
 
 /*                  Bloco Direita                  */
@@ -325,6 +325,8 @@ table#sessaoComentario tr td p{
     position: relative;
     background-color: white;
     z-index: 1;
+    left: 20px;
+    padding: 15px;
 }
 
 /*------------------------------------------------------- LightBox ---------------------------------------------------*/

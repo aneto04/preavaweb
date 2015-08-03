@@ -54,8 +54,12 @@ function fechaLBFrame(){
 
 
 function lightboxNeg(){
-    document.getElementById("lbTitle").innerText="Comentário Negativo";
+    document.getElementById("lbTitle").innerHTML="Comentário Negativo";
+    document.getElementById("formPos").style.display="none";
+    document.getElementById("formNeg").style.display="block";
 }
 function lightboxPos(){
     document.getElementById("lbTitle").innerHTML="Comentário Positivo";
+    document.getElementById("formPos").style.display="block";
+    document.getElementById("formNeg").style.display="none";
 }

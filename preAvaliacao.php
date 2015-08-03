@@ -78,7 +78,15 @@ while($row = $resultado->fetch_array()) {
 
     <br>
 
-    <form method="post" name="comentarios" action="comentarios.php">
+    <form method="post" id="formNeg" name="comentarios" action="comentariosneg.php">
+
+        <textarea id="textA" name="comentario"></textarea><br>
+
+        <input type="submit" id="salvarLB" value="Salvar" onclick="fechaLB()"><br>
+
+    </form>
+
+    <form method="post" id="formPos" name="comentarios" action="comentariospos.php">
 
         <textarea id="textA" name="comentario"></textarea><br>
 
@@ -86,6 +94,7 @@ while($row = $resultado->fetch_array()) {
 
     </form>
 </div>
+
 
 <!-- ================================================== LightBox Avaliação Passada ====================================================== -->
 
