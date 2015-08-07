@@ -288,7 +288,7 @@ while($row = $resultado->fetch_array()) {
 
                 <a id="pessoasTexto">Pessoas</a>
                 </p>
-        <iframe id="iframePessoas" src="Pessoas%20Scroll.html" width="190" height="480" frameborder="0" scrolling="no"></iframe>
+                <iframe id="iframePessoas" src="Pessoas%20Scroll.html" width="190" height="480" frameborder="0" scrolling="no"></iframe>
                 <p>Posto:
                     <a><?php echo $dadosUsuarios['posto']; ?></a>
                 </p>
