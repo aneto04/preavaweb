@@ -33,7 +33,7 @@ while($row = $resultado->fetch_array()) {
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style-iframe.css" rel="stylesheet">
 
-    <script src="jquery-1.11.3.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="js/jquery.js" type="text/javascript" charset="UTF-8"></script>
 
     <script src="js/script-preAvaliacao.js" charset="UTF-8"></script>
 </head>

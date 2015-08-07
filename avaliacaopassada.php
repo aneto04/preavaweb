@@ -5,7 +5,7 @@
     <title>Avaliação Passada</title>
     <link href="css/style-iframe.css" rel="stylesheet">
 
-    <script src="jquery-1.11.3.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="js/jquery.js" type="text/javascript" charset="UTF-8"></script>
     <script src="lytebox.js" type="text/javascript" charset="UTF-8"></script>
     <script src="js/script-preAvaliacao.js"></script>
 </head>
