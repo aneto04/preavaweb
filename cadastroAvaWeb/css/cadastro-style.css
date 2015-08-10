@@ -1,0 +1,124 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "fonteNormal";
+    src: url("../fontes/trebuc.ttf");
+}
+@font-face {
+    font-family: "fonteBold";
+    src: url("../fontes/trebucbd.ttf");
+}
+*{
+    margin: 0;
+    font-family: fonteNormal, sans-serif;
+    padding: 0;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+header#header{
+    width: 138px;
+    height: 50px;
+    padding-top: 3px;
+    float: none;
+    margin: 0 auto;
+}
+.background-cadastro{
+    position: relative;
+    background-image: url("../imagens/background.png");
+    top: 50px;
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+/*----------------------------------------------- Conteúdo Principal -------------------------------------------------*/
+
+#tituloCadastro{
+	padding: 0 20px 20px 20px;
+	border-bottom: 1px solid #b44c00;
+}
+
+        /*------------------------------------------------------------------------------------------------*/
+
+#formCadastro{
+    padding: 10px;
+}
+h3{
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    border-bottom: 1px solid orange;
+    overflow: hidden;
+}
+.tituloSection{
+    width: 190px;
+    background-color: #BA653C;
+    padding: 15px;
+    text-align: center;
+}
+
+        /*------------------------------------------------------------------------------------------------*/
+
+section{
+    padding: 0 10px 0 10px;
+}
+#perfilFoto{
+    margin-bottom: 0;
+}
+#imgPerfil{
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    margin: 0 20px 5px 0;
+    z-index: 100;
+}
+#alterarImgPerfil{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    z-index: 101;
+    background-color: rgba(83, 88, 88, 0.5);
+    color: white;
+    top: -10px;
+}
+#alterarImgPerfil:hover{
+    width: 100%;
+}
+#enviarFoto{
+    display: none;
+}
+.dadosGerais, .dadosPessoais, .contatos{
+    display: inline-block;
+}
+label{
+    font-size: 13pt;
+}
+input, select{
+    border: none;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    padding: 10px;
+    margin: 5px 5px 5px 0;
+    width: 100%;
+    display: inline-block;
+}
+.sexos{
+    border: none;
+	box-shadow: none;
+    width: auto;
+    display: inline-block;
+}
+
+/*---------------------------------------------------- Rodapé --------------------------------------------------------*/
+
+.rodape{
+    width: 100%;
+    border: none;
+    position: fixed;
+    height: 40px;
+    bottom: 0;
+    background-color: #080808;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
