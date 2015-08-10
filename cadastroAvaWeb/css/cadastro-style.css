@@ -45,23 +45,23 @@ header#header{
 }
 h3{
     text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
-    margin-top: 10px;
-    width: 100%;
     color: white;
     border-bottom: 1px solid orange;
-    overflow: hidden;
 }
 .tituloSection{
-    width: 190px;
+    font-size: 100%;
+    width: 25%;
+    min-width: 203px;
     background-color: #BA653C;
     padding: 15px;
-    text-align: center;
+    overflow: visible;
 }
 
         /*------------------------------------------------------------------------------------------------*/
 
 section{
     padding: 0 10px 0 10px;
+    height: 100%;
 }
 #perfilFoto{
     margin-bottom: 0;
@@ -70,8 +70,9 @@ section{
     width: 100%;
     height: 100%;
     box-shadow: 1px 1px 1px rgba(0,0,0,.3);
-    margin: 0 20px 5px 0;
     z-index: 100;
+    max-width: 350px;
+    margin: 0 auto;
 }
 #alterarImgPerfil{
     height: 100%;
@@ -80,7 +81,6 @@ section{
     z-index: 101;
     background-color: rgba(83, 88, 88, 0.5);
     color: white;
-    top: -10px;
 }
 #alterarImgPerfil:hover{
     width: 100%;

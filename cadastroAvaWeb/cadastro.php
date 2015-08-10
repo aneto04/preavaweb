@@ -27,6 +27,15 @@
 
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.js"></script>
+<script src="js/jquery.masked.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#cpf").mask("999.999.999-99");
+        $(".datas").mask("99/99/9999");
+        $("#cep").mask("99999-999");
+        $("#telefone").mask("(99) 99999-9999");
+    });
+</script>
 
 <div class="container-fluid">
 
@@ -44,11 +53,11 @@
 
             <form action="cadastrando.php" method="post" id="formCadastro">
 
-                <h3>
+                <h3 class="row">
                     <div class="tituloSection">Dados gerais</div>
                 </h3>
 
-                <section>
+                <section class="row">
 
                     <!-- ====================================== Foto do Perfil ===================================== -->
 
@@ -88,7 +97,7 @@
                         <label for="dataEntrada">Entrada</label>
                         <br>
 
-                        <input id="dataEntrada" type="date" required="">
+                        <input id="dataEntrada" class="datas" type="text" required="">
 
                     </div>
 
@@ -103,41 +112,46 @@
                     </div>
 
                     <!-- ============================================ Cargo ======================================== -->
-                    <div class="dadosGerais col-xs-12 col-sm-4">
+                    <div class="dadosGerais col-xs-12 col-sm-8">
+                        <div class="dadosGerais col-xs-12 col-sm-6">
 
-                                <label for="cargo">Cargo</label>
-                                <br>
+                            <label for="cargo">Cargo</label>
+                            <br>
 
-                                <select id="cargo" class="dadosGerais col-xs-12 col-sm-12">
+                            <select id="cargo" class="dadosGerais col-xs-12 col-sm-12">
 
-                                    <option value="aspirante">Aspirante</option>
-                                    <option value="estagiario">Estagiário</option>
-                                    <option value="produtor">Produtor(a)</option>
+                                <option value="aspirante">Aspirante</option>
+                                <option value="estagiario">Estagiário</option>
+                                <option value="produtor">Produtor(a)</option>
 
-                                </select>
+                            </select>
+
+                            <!-- ======================================= Sexo ====================================== -->
 
                         </div>
-                    <!-- =========================================== Sexo ========================================== -->
+                            <div class="col-xs-12 col-sm-6">
 
-                    <div class="col-xs-12 col-sm-4">
+                                <label>Sexo</label>
+                                <br>
 
-                        <label>Sexo</label>
-                        <br>
+                                <input type="radio" name="sexo" class="sexos" id="masc" value="masculino" checked="">
+                                <label for="masc">Masculino</label>
+                                <br>
+                                <input type="radio" name="sexo" class="sexos" id="fem" value="feminino">
+                                <label for="fem">Feminino</label>
 
-                        <input type="radio" name="sexo" class="sexos" id="masc" value="masculino" checked="">
-                        
-                    </div>
+                            </div>
                     </div>
 
                 </section>
 
                 <br>
 
-                <h3>
-                    <div class="tituloSection">Dados pessoais</div>
+                <h3 class="row">
+                    <div class="tituloSection col-xs-12">Dados pessoais</div>
                 </h3>
 
-                <section>
+                <section class="row">
                     <!-- =========================================== CPF =========================================== -->
 
                     <div class="dadosPessoais col-xs-12 col-sm-4">
@@ -162,7 +176,7 @@
                         <label for="nascimento">Data de nascimento</label>
                         <br>
 
-                        <input type="date" id="nascimento" required="">
+                        <input type="text" class="datas" id="nascimento" required="">
                     </div>
 
                     <!-- ======================================= Nome da mãe ======================================= -->
@@ -187,10 +201,10 @@
 
                 <br>
 
-                <h3>
-                    <div class="tituloSection">Contatos</div>
+                <h3 class="row">
+                    <div class="tituloSection col-xs-12">Contatos</div>
                 </h3>
-                <section>
+                <section class="row">
                     <!-- ========================================= Endereço ======================================== -->
 
                     <div class="contatos col-xs-12 col-sm-4">
@@ -251,7 +265,7 @@
                         <label for="senha">Senha</label>
                         <br>
 
-                        <input type="text" id="senha" required="">
+                        <input type="password" id="senha" required="">
                     </div>
 
                 </section>
