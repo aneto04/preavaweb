@@ -1,9 +1,6 @@
 <?php
 
-    require 'config.php';
-    require 'connection.php';
-
-
+    require "connection.php";
 
 ?>
 
@@ -62,11 +59,16 @@
                     <!-- ====================================== Foto do Perfil ===================================== -->
 
                     <div id="perfilFoto" class="col-xs-12 col-sm-4">
-                        <img id="imgPerfil" src="imagens/usuarios/default.jpg" align="left">
 
-                        <label id="alterarImgPerfil" for="enviarFoto">
-                            <p align="left">alterar</p>
+                        <label for="enviarFoto" class="col-xs-12">
+                            <figure>
+
+                                <img id="imgPerfil" src="imagens/usuarios/default.jpg">
+                                <figcaption id="alterarImgPerfil">alterar</figcaption>
+
+                            </figure>
                         </label>
+
                         <input type="file" id="enviarFoto">
                         <br>
                     </div>
@@ -112,13 +114,12 @@
                     </div>
 
                     <!-- ============================================ Cargo ======================================== -->
-                    <div class="dadosGerais col-xs-12 col-sm-8">
-                        <div class="dadosGerais col-xs-12 col-sm-6">
-
+                    <div class="dadosGerais col-xs-12 col-sm-4">
+                        <div>
                             <label for="cargo">Cargo</label>
                             <br>
 
-                            <select id="cargo" class="dadosGerais col-xs-12 col-sm-12">
+                            <select id="cargo">
 
                                 <option value="aspirante">Aspirante</option>
                                 <option value="estagiario">Estagiário</option>
@@ -126,21 +127,21 @@
 
                             </select>
 
-                            <!-- ======================================= Sexo ====================================== -->
-
                         </div>
-                            <div class="col-xs-12 col-sm-6">
+                    </div>
+                    <!-- ======================================= Sexo ====================================== -->
 
-                                <label>Sexo</label>
-                                <br>
+                    <div class="col-xs-12 col-sm-4">
 
-                                <input type="radio" name="sexo" class="sexos" id="masc" value="masculino" checked="">
-                                <label for="masc">Masculino</label>
-                                <br>
-                                <input type="radio" name="sexo" class="sexos" id="fem" value="feminino">
-                                <label for="fem">Feminino</label>
+                        <label>Sexo</label>
+                        <br>
 
-                            </div>
+                        <input type="radio" name="sexo" class="sexos" id="masc" value="masculino" checked="">
+                        <label for="masc">Masculino</label>
+                        <br>
+                        <input type="radio" name="sexo" class="sexos" id="fem" value="feminino">
+                        <label for="fem">Feminino</label>
+
                     </div>
 
                 </section>
