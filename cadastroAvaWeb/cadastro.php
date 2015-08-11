@@ -1,7 +1,5 @@
 <?php
-
-    include "connection.php";
-
+include "connection.php";
 ?>
 
 <!DOCTYPE html>
@@ -21,61 +19,6 @@
 
 </head>
 <body>
-<?php
-
-include "connection.php";
-
-if(isset($_POST['enviar'])) {
-    $username = $_POST['username'];
-    $nome_completo = $_POST['nomeCompleto'];
-    $nome_exibido = $_POST['nomeExibido'];
-    $entrada = $_POST['dataEntrada'];
-    $cargo = $_POST['cargo'];
-    $cpf = $_POST['cpf'];
-    $rg = $_POST['rg'];
-    $nascimento = $_POST['dataNascimento'];
-    $nome_mae = $_POST['nomeMae'];
-    $nome_pai = $_POST['nomePai'];
-    $endereco = $_POST['endereco'];
-    $num_casa = $_POST['numCasa'];
-    $bairro = $_POST['bairro'];
-    $cep = $_POST['cep'];
-    $telefone = $_POST['telefone'];
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
-
-    $sql = 'INSERT INTO usuarios(username, nome_completo, nome_exibido, entrada, cargo, cpf, rg, nascimento, nome_mae, nome_pai, endereco, num_casa, bairro, cep, telefone, email, senha)
-        VALUES (:username, :nome_completo, :nome_exibido, :entrada, :cargo, :cpf, :rg, :nascimento, :nome_mae, :nome_pai, :endereco, :num_casa, :bairro, :cep, :telefone, :email, :senha)';
-
-    try {
-        $create = $db -> prepare($sql);
-        $create -> bindValue(':username', $username, PDO::PARAM_STR);
-        $create -> bindValue(':nome_completo', $nome_completo, PDO::PARAM_STR);
-        $create -> bindValue(':nome_exibido', $nome_exibido, PDO::PARAM_STR);
-        $create -> bindValue(':entrada', $entrada, PDO::PARAM_STR);
-        $create -> bindValue(':cargo', $cargo, PDO::PARAM_STR);
-        $create -> bindValue(':cpf', $cpf, PDO::PARAM_STR);
-        $create -> bindValue(':rg', $rg, PDO::PARAM_STR);
-        $create -> bindValue(':nascimento', $nascimento, PDO::PARAM_STR);
-        $create -> bindValue(':nome_mae', $nome_mae, PDO::PARAM_STR);
-        $create -> bindValue(':nome_pai', $nome_pai, PDO::PARAM_STR);
-        $create -> bindValue(':endereco', $endereco, PDO::PARAM_STR);
-        $create -> bindValue(':num_casa', $num_casa, PDO::PARAM_STR);
-        $create -> bindValue(':bairro', $bairro, PDO::PARAM_STR);
-        $create -> bindValue(':cep', $cep, PDO::PARAM_STR);
-        $create -> bindValue(':telefone', $telefone, PDO::PARAM_STR);
-        $create -> bindValue(':email', $email, PDO::PARAM_STR);
-        $create -> bindValue(':senha', $senha, PDO::PARAM_STR);
-
-        if ($create->execute()) {
-            echo "Sucesso ao inserir dados;";
-        }
-
-    } catch (PDOException $e) {
-        echo "Erro ao inserir dados;";
-    }
-}
-?>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.js"></script>
 <script src="js/jquery.masked.js"></script>
@@ -102,7 +45,7 @@ if(isset($_POST['enviar'])) {
 
             <h1 id="tituloCadastro"><b>Cadastro de Usuário</b></h1>
 
-            <form action="" method="post" id="formCadastro">
+            <form action="cadastrando.php" method="post" id="formCadastro">
 
                 <h3 class="row">
                     <div class="tituloSection">Dados gerais</div>
@@ -133,7 +76,7 @@ if(isset($_POST['enviar'])) {
                         <label for="nomeCompleto">Nome completo</label>
                         <br>
 
-                        <input id="nomeCompleto" type="text" required="">
+                        <input id="nomeCompleto" name="nomeCompleto" type="text" >
 
                     </div>
 
@@ -143,7 +86,7 @@ if(isset($_POST['enviar'])) {
                         <label for="nomeExibido">Nome de exibição</label>
                         <br>
 
-                        <input id="nomeExibido" type="text" required="">
+                        <input id="nomeExibido" name="nomeExibido" type="text" >
 
                     </div>
 
@@ -153,7 +96,7 @@ if(isset($_POST['enviar'])) {
                         <label for="dataEntrada">Entrada</label>
                         <br>
 
-                        <input id="dataEntrada" class="datas" type="text" required="">
+                        <input id="dataEntrada" name="dataEntrada" class="datas" type="text" >
 
                     </div>
 
@@ -163,7 +106,7 @@ if(isset($_POST['enviar'])) {
                         <label for="username">Nome de usuário</label>
                         <br>
 
-                        <input id="username" type="text" required="">
+                        <input id="username" name="username" type="text" >
 
                     </div>
 
@@ -213,7 +156,7 @@ if(isset($_POST['enviar'])) {
                         <label for="cpf">CPF</label>
                         <br>
 
-                        <input type="text" id="cpf">
+                        <input type="text" name="cpf" id="cpf">
                     </div>
 
                     <!-- ============================================ RG =========================================== -->
@@ -222,7 +165,7 @@ if(isset($_POST['enviar'])) {
                         <label for="rg">RG</label>
                         <br>
 
-                        <input type="text" id="rg" required="">
+                        <input type="text" name="rg" id="rg" >
                     </div>
 
                     <!-- =================================== Data de nascimento ==================================== -->
@@ -231,7 +174,7 @@ if(isset($_POST['enviar'])) {
                         <label for="nascimento">Data de nascimento</label>
                         <br>
 
-                        <input type="text" class="datas" id="nascimento" required="">
+                        <input type="text" name="dataNascimento" class="datas" id="nascimento" >
                     </div>
 
                     <!-- ======================================= Nome da mãe ======================================= -->
@@ -240,7 +183,7 @@ if(isset($_POST['enviar'])) {
                         <label for="nomeMae">Nome da mãe</label>
                         <br>
 
-                        <input type="text" id="nomeMae" required="">
+                        <input type="text" name="nomeMae" id="nomeMae" >
                     </div>
 
                     <!-- ======================================= Nome do pai ======================================= -->
@@ -249,7 +192,7 @@ if(isset($_POST['enviar'])) {
                         <label for="nomePai">Nome do Pai</label>
                         <br>
 
-                        <input type="text" id="nomePai" required="">
+                        <input type="text" name="nomePai" id="nomePai" >
                     </div>
 
                 </section>
@@ -266,7 +209,7 @@ if(isset($_POST['enviar'])) {
                         <label for="endereco">Endereço</label>
                         <br>
 
-                        <input type="text" id="endereco" required="">
+                        <input type="text" name="endereco" id="endereco" >
                     </div>
 
                     <!-- ====================================== Número da casa ===================================== -->
@@ -275,7 +218,7 @@ if(isset($_POST['enviar'])) {
                         <label for="numCasa">Número</label>
                         <br>
 
-                        <input type="text" id="numCasa" required="">
+                        <input type="text" name="numCasa" id="numCasa" >
                     </div>
 
                     <!-- ========================================== Bairro ========================================= -->
@@ -284,7 +227,7 @@ if(isset($_POST['enviar'])) {
                         <label for="bairro">Bairro</label>
                         <br>
 
-                        <input type="text" id="bairro" required="">
+                        <input type="text" name="bairro" id="bairro" >
                     </div>
 
                     <!-- =========================================== CEP =========================================== -->
@@ -293,7 +236,7 @@ if(isset($_POST['enviar'])) {
                         <label for="cep">CEP</label>
                         <br>
 
-                        <input type="text" id="cep" required="">
+                        <input type="text" name="cep" id="cep" >
                     </div>
 
                     <!-- ========================================= Telefone ======================================== -->
@@ -302,7 +245,7 @@ if(isset($_POST['enviar'])) {
                         <label for="telefone">Telefone</label>
                         <br>
 
-                        <input type="text" id="telefone" required="">
+                        <input type="text" name="telefone" id="telefone" >
                     </div>
 
                     <!-- ========================================== Email ========================================== -->
@@ -311,7 +254,7 @@ if(isset($_POST['enviar'])) {
                         <label for="email">E-mail</label>
                         <br>
 
-                        <input type="email" id="email" required="">
+                        <input type="email" name="email" id="email" >
                     </div>
 
                     <!-- ========================================== Senha ========================================== -->
@@ -320,21 +263,24 @@ if(isset($_POST['enviar'])) {
                         <label for="senha">Senha</label>
                         <br>
 
-                        <input type="password" id="senha" required="">
+                        <input type="password" name="senha" id="senha" >
                     </div>
 
                 </section>
                 <br>
-                <input type="submit" id="enviar" value="Cadastrar">
+
+                <input type="submit" id="enviar" name="enviar" value="Cadastrar">
 
             </form>
         </div>
     </div>
+
     <footer class="rodape row">
         <p>
             2015 <abbr title="Instituto Tecnológico e Vocacional Avançado">ITEVA</abbr> &copy; - Todos os direitos reservados
         </p>
     </footer>
+
 </div>
 </body>
 </html>
