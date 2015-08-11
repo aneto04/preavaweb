@@ -1,23 +1,23 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.12
+-- version 3.5.3
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: 11-Ago-2015 às 02:57
--- Versão do servidor: 5.6.25
--- PHP Version: 5.5.27
+-- Servidor: localhost
+-- Tempo de Geração: 
+-- Versão do Servidor: 5.5.28
+-- Versão do PHP: 5.3.18
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
--- Database: `preavaliacao`
+-- Banco de Dados: `preavaliacao`
 --
 
 -- --------------------------------------------------------
@@ -44,18 +44,19 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `cep` varchar(10) NOT NULL,
   `telefone` varchar(15) NOT NULL,
   `email` varchar(250) NOT NULL,
-  `senha` varchar(50) NOT NULL
+  `senha` varchar(50) NOT NULL,
+  PRIMARY KEY (`username`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Indexes for dumped tables
+-- Extraindo dados da tabela `usuarios`
 --
 
---
--- Indexes for table `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`username`);
+INSERT INTO `usuarios` (`username`, `nome_completo`, `nome_exibido`, `entrada`, `cargo`, `sexo`, `cpf`, `rg`, `nascimento`, `nome_mae`, `nome_pai`, `endereco`, `num_casa`, `bairro`, `cep`, `telefone`, `email`, `senha`) VALUES
+('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('1', '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('armando', 'ertyertgerg', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('fgdhdfghgfdh', 'fdghfdg', 'fdghfdg', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
