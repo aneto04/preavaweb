@@ -11,30 +11,34 @@
   <title ></title >
 </head >
 <body >
-
 <?php
-    if(isset($_POST['enviar'])) {
 
-        $nome = $_POST['nome'];
-        $email = $_POST['email'];
+include "connection.php";
 
-        $sql = 'INSERT INTO testes(nome, email)
-                VALUES (:nome, :email)';
+if(isset($_POST['enviar'])) {
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
 
-        try {
-            $create = $db->prepare($sql);
-            $create->bindValue(':nome', $nome, PDO::PARAM_STR);
-            $create->bindValue(':email', $email, PDO::PARAM_STR);
+    $sql = 'INSERT INTO testes(nome, email)
+        VALUES (:nome, :email)';
 
-            if ($create->execute()) {
-                echo "Sucesso ao inserir dados;";
-            }
-        } catch (PDOException $e) {
-            echo "Erro ao inserir dados;";
+    try {
+        $create = $db -> prepare($sql);
+        $create -> bindValue(':nome', $nome, PDO::PARAM_STR);
+        $create -> bindValue(':email', $email, PDO::PARAM_STR);
+
+        if ($create->execute()) {
+            echo "Sucesso ao inserir dados;";
+        }else{
+            echo "deu ruim";
         }
+
+    } catch (PDOException $e) {
+        echo "Erro ao inserir dados;";
     }
+}
 ?>
-    <form method="post" action="">
+    <form method="post" action="cadastrando.php">
 
         <input type="text" id="nome" name="nome" placeholder="Nome">
         <br>
